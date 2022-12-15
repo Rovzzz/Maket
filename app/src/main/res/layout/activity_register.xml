@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/Label"
+        android:layout_width="157dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif"
+        android:text="Register"
+        android:textColor="#501569"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editFullName"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dip"
+        android:hint="Full name"
+        android:textColor="#694379"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dip"
+        android:hint="Enter Email / Phone Number"
+        android:textColor="#694379"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFullName" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dip"
+        android:hint="Password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="#694379"
+        android:background="@drawable/rounded_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+
+    <CheckBox android:id="@+id/visible_eye_reg1"
+        android:layout_width="35dp"
+        android:layout_height="42dp"
+        android:button="@drawable/bt_eye"
+        app:layout_constraintBottom_toBottomOf="@+id/editPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editPassword"
+        app:layout_constraintTop_toTopOf="@+id/editPassword" />
+
+    <EditText
+        android:id="@+id/editConfirmPassword"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="10dip"
+        android:hint="Confirm Password"
+        android:textColor="#694379"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
+
+    <CheckBox android:id="@+id/visible_eye_reg2"
+        android:layout_width="35dp"
+        android:layout_height="42dp"
+        android:button="@drawable/bt_eye"
+        app:layout_constraintBottom_toBottomOf="@+id/editConfirmPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editConfirmPassword"
+        app:layout_constraintTop_toTopOf="@+id/editConfirmPassword" />
+
+    <CheckBox
+    android:id="@+id/radioButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="@string/I_agree"
+        android:button="@drawable/toggle"
+        android:buttonTint="@color/purple_700"
+    android:textColor="#703E85"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.086"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editConfirmPassword" />
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="224dp"
+        android:background="@drawable/rounded_edittext"
+        android:backgroundTint="#D5A9E8"
+        android:text="Register"
+        android:onClick="Reg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="OR"
+        android:textColor="#703E85"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Register"/>
+
+    <Button
+        android:id="@+id/bt_google"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="GOOGLE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/or" />
+
+    <Button
+        android:id="@+id/bt_facebook"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="FACEBOOK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/or" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="28dp"
+        android:text="Already registered ?Let’s"
+        android:textColor="#703E85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="43dp"
+        android:layout_height="23dp"
+        android:text="Login"
+        android:onClick="Reg"
+        android:textColor="#703E85"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
